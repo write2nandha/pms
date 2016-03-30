@@ -1,0 +1,60 @@
+<section data-ng-controller="TestController">
+  <div class="container">
+    <div class="row">
+       <div class="col-md-6" id="area1">
+  <nvd3-discrete-bar-chart
+          	data="exampleData"
+              id="policyStatusBarChart"
+              x="barxFunction()"
+              y="baryFunction()"
+              margin="{left:90,top:20,bottom:20,right:20}"
+              tooltips="true"
+              showValues="true"
+              showXAxis="true"
+              showYAxis="true"
+              showLegend="true"
+              width="500"
+              height="500"
+              xAxisLabel="Policy Status"
+              yAxisLabel="Policy Count"
+              valueFormat="valueFormatFunction()"
+              yAxisTickFormat="yAxisPolicyCountFormatFunction()">
+              	<svg></svg>
+          </nvd3-discrete-bar-chart>
+        </div>
+      <div class="col-md-6" id="area2">
+  <nvd3-pie-chart
+      data="exampleDataForPieChart"
+      width="500"
+      height="500"
+      id="revenuePieChart"
+      x="xFunction()"
+      y="yFunction()"
+      showLabels="true"
+      pieLabelsOutside="false"
+      showValues="true"
+      showLegend="true"
+      labelType="percent">
+          <svg></svg>
+  </nvd3-pie-chart>
+</div>
+</div>
+<div class="row">
+ <div class="col-md-6" id="area3">
+   <nvd3-multi-bar-chart
+    	data="multiProgramPolicyStatus"
+        id="multiProgramPolicyStatusId"
+        showLegend="true"
+        showValues="true"
+        tooltips="true"
+        width="550"
+        height="350"
+        showXAxis="true"
+        showYAxis="true">
+        	<svg></svg>
+    </nvd3-multi-bar-chart>
+ </div>
+</div>
+</div>
+
+</section>
